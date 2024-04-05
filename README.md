@@ -1,30 +1,33 @@
-# React + TypeScript + Vite
+# Todo App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a simple todo application built with React. It allows users to add, edit, and delete tasks.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Add tasks
+- Edit tasks
+- Delete tasks
+- View task list
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Components
 
-- Configure the top-level `parserOptions` property like this:
+The following components are used in the application:
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-};
-```
+- `AddTask`: Component to add new tasks.
+- `TaskList`: Component to display the list of tasks.
+- `TaskListItem`: Component to display individual tasks in the list.
+- `TaskListHeader`: Component to display the header of the task list.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Functionality
+
+- **Add Task**: Users can add tasks by entering task names and clicking the "Add" button.
+- **Edit Task**: Users can edit tasks by clicking the "Edit" button next to each task, modifying the task name, and clicking the "Save" button.
+- **Delete Task**: Users can delete tasks by clicking the "Delete" button next to each task.
+
+## Testing
+
+The application is tested using `vitest`. Test cases cover various functionalities including adding, editing, and deleting tasks.
+
+To run the tests, use the following command:
+`npm run test`
